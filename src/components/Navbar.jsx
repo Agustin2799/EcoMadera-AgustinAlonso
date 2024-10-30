@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import CardWidget from "./CardWidget";
+import CartWidget from "./CartWidget";
 import { Link } from "react-scroll";
-import { ShoppingCartIcon, Bars3Icon } from "@heroicons/react/24/outline";
+import { ShoppingCartIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NavBar = () => {
+  //El useState y la funcion openAndCloseNav se utilizan para manejar el despliegue del nav en pantallas más pequeñas.
   const [navIsOpen, setNavIsOpen] = useState(false);
-
   const openAndCloseNav = () => setNavIsOpen(!navIsOpen);
 
   return (
@@ -38,16 +38,19 @@ const NavBar = () => {
               </Link>
             </ul>
           </div>
-          <div className="relative h-14 w-14 ml-3 lg:ml-7 mr-1 lg:mr-0 flex items-center justify-center rounded-full hover:bg-gray-500 transition duration-700 cursor-pointer">
-            <div className="absolute -top-1 -right-1 rounded-full h-6 w-6 bg-amber-950 text-amber-500 font-semibold flex items-center justify-center border-amber-300 border-2">
-              3
-            </div>
-            <ShoppingCartIcon className="size-9" />
-          </div>
-          <Bars3Icon
-            className="size-9 md:hidden mx-2"
-            onClick={openAndCloseNav}
-          />
+          {/* CartWidget se utiliza para renderizar el carrito y la cantidad de productos en el. */}
+          <CartWidget productosEnCarrito={5} />
+          {navIsOpen ? (
+            <XMarkIcon
+              className="size-9 md:hidden mx-4"
+              onClick={openAndCloseNav}
+            />
+          ) : (
+            <Bars3Icon
+              className="size-9 md:hidden mx-4"
+              onClick={openAndCloseNav}
+            />
+          )}
         </div>
       </div>
       {navIsOpen && (

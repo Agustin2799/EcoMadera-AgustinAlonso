@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <ItemListContainer greeting={'Calidez y estilo rústico para tu hogar'} />
     </>
   );
 }
