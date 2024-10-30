@@ -14,8 +14,8 @@ const NavBar = () => {
         <div className="text-white flex items-center cursor-pointer">
           <img src="../../public/trunk-wood-svgrepo-com.svg" />
           <div className="flex flex-col font-semibold font-serif">
-            <h1 className="text-4xl ">Del</h1>
-            <h1 className="text-4xl ">Leño</h1>
+            <h1 className="text-4xl ">Eco</h1>
+            <h1 className="text-4xl ">Madera</h1>
           </div>
         </div>
         <div className="flex items-center ">
