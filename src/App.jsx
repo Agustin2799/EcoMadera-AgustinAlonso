@@ -3,13 +3,14 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; //Importamos los componentes que necesitamos de la librería
 import HomeView from "./views/HomeView";
 import ProductsView from "./views/ProductsView";
-import NavBar from "./components/NavBar.jsx";
+import Nav from "./components/Nav";
+
 
 function App() {
   return (
     <BrowserRouter>
       {/*BrowserRouters evalua las rutas*/}
-     <NavBar />
+     <Nav />
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/products" element={<ProductsView />}/>

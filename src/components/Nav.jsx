@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const NavBar = () => {
+const Nav = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const openAndCloseNav = () => setNavIsOpen(!navIsOpen);
 
@@ -82,4 +82,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Nav;
