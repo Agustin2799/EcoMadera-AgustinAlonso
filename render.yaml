@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Eco-Madera
+    env: static
+    staticPublishPath: ./build
+    buildCommand: npm install && npm run build
+    branch: main
+    routes:
+      - type: rewrite
+        source: '/*'
+        destination: '/'
