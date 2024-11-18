@@ -34,13 +34,13 @@ const Nav = () => {
         <div className="flex items-center">
           <div className="pr-4 border-r border-white hidden md:flex">
             <ul className="flex font-semibold font-sans text-2xl">
-              <NavLink to="/products" className={navLinkClasses}>
+              <NavLink to="/all-products" className={navLinkClasses}>
                 Productos
               </NavLink>
-              <NavLink to="/about" className={navLinkClasses}>
+              <NavLink to="/" className={navLinkClasses}>
                 Nosotros
               </NavLink>
-              <NavLink to="/contact" className={navLinkClasses}>
+              <NavLink to="/" className={navLinkClasses}>
                 Contacto
               </NavLink>
             </ul>
@@ -66,13 +66,13 @@ const Nav = () => {
       {navIsOpen && (
         <div className="absolute top-36 w-full bg-gray-500 md:hidden">
           <ul className="flex flex-col font-semibold font-sans text-2xl">
-            <NavLink to="/products" className={navLinkClasses}>
+            <NavLink to="/all-products" className={navLinkClasses}>
               Productos
             </NavLink>
-            <NavLink to="/about" className={navLinkClasses}>
+            <NavLink to="/" className={navLinkClasses}>
               Nosotros
             </NavLink>
-            <NavLink to="/contact" className={navLinkClasses}>
+            <NavLink to="/" className={navLinkClasses}>
               Contacto
             </NavLink>
           </ul>

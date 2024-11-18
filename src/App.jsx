@@ -13,8 +13,8 @@ function App() {
      <Nav />
       <Routes>
         <Route path="/" element={<HomeView />} />
-        <Route path="/products" element={<ProductsView />}/>
-        <Route path="/products/:categories" element={<ProductsView />} />
+        <Route path="/all-products" element={<ProductsView />}/>
+        <Route path="/category/:category" element={<ProductsView />} />
         {/* <Route path="/item" element={ } /> */}
       </Routes>
     </BrowserRouter>
