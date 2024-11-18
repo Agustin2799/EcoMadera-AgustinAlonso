@@ -1,14 +1,15 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom"; //Importamos los componentes que necesitamos de la librería
 import HomeView from "./views/HomeView";
 import ProductsView from "./views/ProductsView";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <BrowserRouter>
       {/*BrowserRouters evalua las rutas*/}
-      <NavBar />
+     <NavBar />
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/products" element={<ProductsView />}/>

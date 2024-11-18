@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NavBar = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -37,10 +34,7 @@ const NavBar = () => {
         <div className="flex items-center">
           <div className="pr-4 border-r border-white hidden md:flex">
             <ul className="flex font-semibold font-sans text-2xl">
-              <NavLink
-                to="/products"
-                className={navLinkClasses}
-              >
+              <NavLink to="/products" className={navLinkClasses}>
                 Productos
               </NavLink>
               <NavLink to="/about" className={navLinkClasses}>
@@ -72,10 +66,7 @@ const NavBar = () => {
       {navIsOpen && (
         <div className="absolute top-36 w-full bg-gray-500 md:hidden">
           <ul className="flex flex-col font-semibold font-sans text-2xl">
-            <NavLink
-              to="/products"
-              className={navLinkClasses}
-            >
+            <NavLink to="/products" className={navLinkClasses}>
               Productos
             </NavLink>
             <NavLink to="/about" className={navLinkClasses}>
