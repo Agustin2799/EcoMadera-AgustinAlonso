@@ -469,3 +469,14 @@ export const getProducts = () => {
     }, 2000);
   });
 };
+
+export const getOneProduct = (id) => {
+  console.log(id)
+  return getProducts().then((res) => {
+    const product = res.find((prod) => prod.id === parseInt(id))
+    return product
+  }).catch((err) => {
+    console.log("Ocurrió un error", err);
+    throw err; // Asegura que la promesa rechazada sea manejada correctamente en el lugar donde se llama a la función.  Propaga el error para que pueda ser manejado a nivel del componente.
+  })
+}

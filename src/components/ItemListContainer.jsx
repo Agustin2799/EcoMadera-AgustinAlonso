@@ -51,11 +51,15 @@ const ItemListContainer = ({ greeting }) => {
   //Lo usaremos para reiniciar la animación cada vez que cambie el header de los productos
   // Usamos controls.start() para reiniciar la animación cada vez que cambie el header 
   useEffect(() => {
-    controls.start({
-      x: [50, 0], // Podemos usar un array para definir la animación
-      opacity: [0, 1], transition: { duration: 1 }
-    });
-  }, [header, controls]);
+    if (!loading) {
+      controls.start({
+        x: [50, 0], // Podemos usar un array para definir la animación
+        opacity: [0, 1],
+        transition: { duration: 1 },
+      });
+      console.log("animando");
+    }
+  }, [controls, loading]);
 
   return (
     <section className=" bg-slate-400 min-h-screen h-auto">
@@ -63,7 +67,7 @@ const ItemListContainer = ({ greeting }) => {
         <div className="flex flex-col w-full">
           {!loading && (
             <motion.h1
-              initial={{ x: 50, opacity: 0 }}
+            
               animate={controls}
               className="text-white text-3xl md:text-5xl font-semibold mx-16 mt-5 md:mx-24"
             >

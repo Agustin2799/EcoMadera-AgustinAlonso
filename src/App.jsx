@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"; //Importamos lo
 import HomeView from "./views/HomeView";
 import ProductsView from "./views/ProductsView";
 import Nav from "./components/Nav";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomeView />} />
         <Route path="/all-products" element={<ProductsView />}/>
         <Route path="/category/:category" element={<ProductsView />} />
+        <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
         {/* <Route path="/item" element={ } /> */}
       </Routes>
     </BrowserRouter>

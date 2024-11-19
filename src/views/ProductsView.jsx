@@ -8,7 +8,7 @@ const ProductsView = () => {
   return (
     <>
       <CategoriesNav categoriesList={categoriesList} />
-      <ItemListContainer greeting={"Tenemos lo que estás buscando"} />
+      <ItemListContainer greeting={"Todo lo que estás buscando"} />
     </>
   );
 };
