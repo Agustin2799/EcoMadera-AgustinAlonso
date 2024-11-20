@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -47,37 +48,88 @@ const Nav = () => {
           </div>
           {/* Cart Widget */}
           <CartWidget productosEnCarrito={5} />
-          {/* Mobile Navigation Icon */}
-          {navIsOpen ? (
-            <XMarkIcon
-              className="size-9 md:hidden mx-4"
-              onClick={openAndCloseNav}
-            />
-          ) : (
-            <Bars3Icon
-              className="size-9 md:hidden mx-4"
-              onClick={openAndCloseNav}
-            />
-          )}
+          <div
+            className="sm:hidden flex items-center"
+            onClick={openAndCloseNav}
+          >
+            {/* Este div contiene el componente motion.div de Framer Motion, que se utiliza para aplicar animaciones. */}
+            <motion.div
+              // La propiedad 'transition' define la duración de la animación en 0.8 segundos.
+              transition={{ duration: 0.8 }}
+              // 'animate' define las animaciones que deben aplicarse a este div
+              animate={{
+                // La animación de opacidad es de 0 a 1, lo que hace que el elemento se desvanezca al aparecer.
+                opacity: [0, 1],
+                // La animación de rotación, si navOpen es verdadero, rota 180 grados; si es falso, no rota (0 grados).
+                rotate: navIsOpen ? 180 : 0,
+              }}
+            >
+              {/* Este div dentro de motion.div envuelve los íconos y tiene una clave (key) condicional basada en
+    el estado 'navOpen'. Esto es importante para que React trate los elementos como si fueran diferentes
+    cuando 'navOpen' cambia y haga que se realice una transición suave entre los íconos. 
+    
+    En Framer Motion, las propiedades initial y exit se utilizan en la animación de un componente cuando se monta (inicia) o se desmonta (sale) de la interfaz de usuario.
+    */}
+              <motion.div
+                key={navIsOpen ? "X" : "Bars"} // Establece un valor dinámico para la clave (key) basado en el valor de 'navOpen'.
+                initial={{ opacity: 0 }} // Establece la opacidad inicial en 0, es decir, el ícono comienza invisible.
+                // 'animate' define cómo debe cambiar la opacidad cuando el ícono es visible.
+                animate={{ opacity: 1 }} // Cambia la opacidad a 1, lo que hace que el ícono se vuelva visible.
+                // 'exit' define cómo debe comportarse la opacidad cuando el ícono desaparece (en este caso se desvanece).
+                exit={{ opacity: 0 }} // Hace que el ícono se desvanezca (opacidad 0) cuando el estado cambia.
+                // 'transition' también se aplica aquí para definir la duración de la transición de opacidad.
+                transition={{ duration: 0.8 }} // Define que la transición de opacidad dure 0.8 segundos.
+              >
+                {/* Aquí decidimos qué ícono se muestra dependiendo de si 'navOpen' es verdadero o falso. */}
+                {navIsOpen ? (
+                  // Si 'navOpen' es verdadero, mostramos el ícono de la 'X' (ícono de cerrar).
+                  <XMarkIcon className="size-9 text-white" />
+                ) : (
+                  // Si 'navOpen' es falso, mostramos el ícono de las barras (ícono de menú).
+                  <Bars3Icon className="size-9 text-white" />
+                )}
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      {navIsOpen && (
-        <div className="absolute top-36 w-full bg-gray-500 md:hidden">
+      {
+        <motion.div
+          className="absolute top-36 w-full bg-gray-500 md:hidden"
+          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }} // Establece la opacidad inicial en 0, es decir, el ícono comienza invisible.
+          // 'animate' define cómo debe cambiar la opacidad cuando el ícono es visible.
+          animate={{ opacity: navIsOpen ? 1 : 0 }} // Cambia la opacidad a 1, lo que hace que el ícono se vuelva visible.
+          // 'exit' define cómo debe comportarse la opacidad cuando el ícono desaparece (en este caso se desvanece).
+          exit={{ opacity: 0 }} // Hace que el ícono se desvanezca (opacidad 0) cuando el estado cambia.
+        >
           <ul className="flex flex-col font-semibold font-sans text-2xl">
-            <NavLink to="/all-products" className={navLinkClasses}>
+            <NavLink
+              to="/all-products"
+              className={navLinkClasses}
+              onClick={openAndCloseNav}
+            >
               Productos
             </NavLink>
-            <NavLink to="/" className={navLinkClasses}>
+            <NavLink
+              to="/"
+              className={navLinkClasses}
+              onClick={openAndCloseNav}
+            >
               Nosotros
             </NavLink>
-            <NavLink to="/" className={navLinkClasses}>
+            <NavLink
+              to="/"
+              className={navLinkClasses}
+              onClick={openAndCloseNav}
+            >
               Contacto
             </NavLink>
           </ul>
-        </div>
-      )}
+        </motion.div>
+      }
     </nav>
   );
 };

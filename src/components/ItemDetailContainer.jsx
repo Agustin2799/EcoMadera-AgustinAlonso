@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { getOneProduct } from "../mock/data";
+import ItemDetailLoader from "./ItemDetailLoader";
 
 const ItemDetailContainer = () => {
-  const [ItemDetailLoader, setItemDetailLoader] = useState(true);
+  const [detailLoader, setDetailLoader] = useState(true);
   const [product, setProduct] = useState();
   const { itemId } = useParams();
 
@@ -18,14 +19,14 @@ const ItemDetailContainer = () => {
       .catch((err) => {
         console.log("Ocurrió un error", err);
       })
-      .finally(() => setItemDetailLoader(!ItemDetailLoader));
+      .finally(() => setDetailLoader(!detailLoader));
   }, [itemId]);
 
   useEffect(() => {
     console.log('en el useEffect del itemDetailContainer', product);
   }, [product]);
 
-    return <div>{ItemDetailLoader ? 'Cargando..' : <ItemDetail product={product} />}</div>;
+    return <div className="bg-slate-400 w-full min-h-screen pt-5 md:pt-10">{detailLoader ? <ItemDetailLoader />: <ItemDetail product={product} />}</div>;
 };
 
 export default ItemDetailContainer;
