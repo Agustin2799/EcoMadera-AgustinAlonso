@@ -14,7 +14,7 @@ const Nav = () => {
       : "px-3 my-2 py-2 lg:px-6 lg:py-6 hover:text-amber-500 border-b-4 border-transparent hover:border-amber-500 transition duration-700 cursor-pointer";
 
   return (
-    <nav className="bg-gradient-to-b from-gray-700 to-gray-500 text-white">
+    <nav className="bg-gradient-to-b from-gray-700 to-gray-500 text-white z-10">
       <div className="h-40 flex items-center justify-between px-4 lg:px-14">
         {/* Logo */}
         <NavLink to="/">
@@ -38,10 +38,16 @@ const Nav = () => {
               <NavLink to="/all-products" className={navLinkClasses}>
                 Productos
               </NavLink>
-              <NavLink to="/" className={navLinkClasses}>
+              <NavLink
+                to="/about"
+                className={`${navLinkClasses} pointer-events-none opacity-50`}
+              >
                 Nosotros
               </NavLink>
-              <NavLink to="/" className={navLinkClasses}>
+              <NavLink
+                to="/contact"
+                className={`${navLinkClasses} pointer-events-none opacity-50`}
+              >
                 Contacto
               </NavLink>
             </ul>
@@ -97,13 +103,13 @@ const Nav = () => {
       {/* Mobile Navigation */}
       {
         <motion.div
-          className="absolute top-36 w-full bg-gray-500 md:hidden"
+          className="absolute top-36 w-full bg-gray-600 md:hidden z-0"
           transition={{ duration: 0.5 }}
-          initial={{ opacity: 0 }} // Establece la opacidad inicial en 0, es decir, el ícono comienza invisible.
+          initial={{ opacity: 0, y: -350 }} // Establece la opacidad inicial en 0, es decir, el ícono comienza invisible.
           // 'animate' define cómo debe cambiar la opacidad cuando el ícono es visible.
-          animate={{ opacity: navIsOpen ? 1 : 0 }} // Cambia la opacidad a 1, lo que hace que el ícono se vuelva visible.
+          animate={{ opacity: navIsOpen ? 1 : 0, y: navIsOpen ? 0 : -350 }} // Cambia la opacidad a 1, lo que hace que el ícono se vuelva visible.
           // 'exit' define cómo debe comportarse la opacidad cuando el ícono desaparece (en este caso se desvanece).
-          exit={{ opacity: 0 }} // Hace que el ícono se desvanezca (opacidad 0) cuando el estado cambia.
+          exit={{ opacity: 0, y: -350 }} // Hace que el ícono se desvanezca (opacidad 0) cuando el estado cambia.
         >
           <ul className="flex flex-col font-semibold font-sans text-2xl">
             <NavLink
@@ -114,15 +120,15 @@ const Nav = () => {
               Productos
             </NavLink>
             <NavLink
-              to="/"
-              className={navLinkClasses}
+              to="/about"
+              className={`${navLinkClasses} pointer-events-none opacity-50`}
               onClick={openAndCloseNav}
             >
               Nosotros
             </NavLink>
             <NavLink
-              to="/"
-              className={navLinkClasses}
+              to="/contact"
+              className={`${navLinkClasses} pointer-events-none opacity-50`}
               onClick={openAndCloseNav}
             >
               Contacto
