@@ -3,9 +3,7 @@ import ItemCategoryLabel from "./ItemCategoryLabel";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ product }) => {
-  useEffect(() => {
-    console.log("En useEffect del ItemDetail", product);
-  }, [product]);
+ 
   return (
     <div className="w-5/6 mx-auto">
       <div className="flex flex-col md:flex-row gap-6 items-center">
@@ -36,9 +34,7 @@ const ItemDetail = ({ product }) => {
             <h4 className="text-3xl font-semibold bg-slate-600 p-2 rounded-md text-green-300">
               ${product.price}
             </h4>
-
             <h4 className="text-xl m-5 text-slate-700">Stock: {product.stock}</h4>
-
             {/* <div className="flex">
                 <ItemCount stock={product.stock} />
                 <button className="rounded-lg border p-2">

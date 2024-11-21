@@ -15,16 +15,16 @@ const Nav = () => {
 
   return (
     <nav className="bg-gradient-to-b from-gray-700 to-gray-500 text-white z-10">
-      <div className="h-40 flex items-center justify-between px-4 lg:px-14">
+      <div className="h-32 flex items-center justify-between px-4 lg:px-14">
         {/* Logo */}
         <NavLink to="/">
           <div className="text-white flex items-center cursor-pointer">
             <img
-              className="h-20 md:h-28"
+              className="h-20"
               src="../../trunk-wood-svgrepo-com.svg"
               alt="EcoMadera Logo"
             />
-            <div className="flex flex-col font-semibold font-serif">
+            <div className="flex flex-col font-light font-serif">
               <h1 className="text-xl md:text-3xl">Eco</h1>
               <h1 className="text-xl md:text-3xl">Madera</h1>
             </div>
