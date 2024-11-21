@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <nav className="bg-gradient-to-b from-gray-700 to-gray-500 text-white z-10">
-      <div className="h-32 flex items-center justify-between px-4 lg:px-14">
+      <div className="h-40 flex items-center justify-between px-4 lg:px-14">
         {/* Logo */}
         <NavLink to="/">
           <div className="text-white flex items-center cursor-pointer">
