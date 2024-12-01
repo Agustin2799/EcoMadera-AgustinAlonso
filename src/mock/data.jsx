@@ -1,16 +1,5 @@
-const products = [
+export const products = [
   {
-    id: 1,
-    img: "https://i.postimg.cc/MZt6LBZ7/product1.jpg",
-    price: 690,
-    stock: 15,
-    name: "Auxiliar de baño",
-    description:
-      "Este elegante auxiliar de baño de madera rústica es perfecto para mantener tus artículos de baño organizados y al alcance de la mano. Su diseño compacto y funcional lo hace ideal para baños pequeños o espacios reducidos. Además, su acabado rústico añade un toque de calidez y naturalidad a tu decoración, haciendo que tu baño luzca aún más acogedor y elegante. Perfecto para ser montado en la pared y liberar espacio en el suelo.",
-    categories: ["Rústico", "Baño", "De pared", "Interior"],
-  },
-  {
-    id: 2,
     img: "https://i.postimg.cc/0yK9rHYn/product2.jpg",
     price: 1420,
     stock: 3,
@@ -27,7 +16,6 @@ const products = [
     ],
   },
   {
-    id: 3,
     img: "https://i.postimg.cc/PrxXnqNB/product3.jpg",
     price: 650,
     stock: 14,
@@ -37,7 +25,6 @@ const products = [
     categories: ["Interior", "Baño", "De pared"],
   },
   {
-    id: 4,
     img: "https://i.postimg.cc/c4bsxNn6/product4.jpg",
     price: 2990,
     stock: 3,
@@ -47,7 +34,6 @@ const products = [
     categories: ["Interior", "Exterior", "De pared", "Más vendidos"],
   },
   {
-    id: 5,
     img: "https://i.postimg.cc/Xvw3kGDy/product5.jpg",
     price: 450,
     stock: 9,
@@ -63,7 +49,6 @@ const products = [
     ],
   },
   {
-    id: 6,
     img: "https://i.postimg.cc/VNymtB48/product6.jpg",
     price: 990,
     stock: 12,
@@ -73,7 +58,6 @@ const products = [
     categories: ["Baño", "Interior"],
   },
   {
-    id: 7,
     img: "https://i.postimg.cc/sXsz6jtH/product7.jpg",
     price: 370,
     stock: 31,
@@ -83,7 +67,6 @@ const products = [
     categories: ["Interior", "Living", "Para regalar", "Más vendidos"],
   },
   {
-    id: 8,
     img: "https://i.postimg.cc/ZRHS1kmb/product8.jpg",
     price: 2600,
     stock: 17,
@@ -93,7 +76,6 @@ const products = [
     categories: ["Interior", "Exterior", "De Pared"],
   },
   {
-    id: 9,
     img: "https://i.postimg.cc/RhbzZcq2/product9.jpg",
     price: 780,
     stock: 39,
@@ -103,7 +85,6 @@ const products = [
     categories: ["Dormitorio", "Interior"],
   },
   {
-    id: 10,
     img: "https://i.postimg.cc/QCM3D6Np/product10.jpg",
     price: 290,
     stock: 154,
@@ -119,7 +100,6 @@ const products = [
     ],
   },
   {
-    id: 11,
     img: "https://i.postimg.cc/Wp9V8PSS/product11.jpg",
     price: 8900,
     stock: 2,
@@ -129,7 +109,6 @@ const products = [
     categories: ["Exterior"],
   },
   {
-    id: 12,
     img: "https://i.postimg.cc/PrPjFFRH/product12.jpg",
     price: 14900,
     stock: 3,
@@ -139,7 +118,6 @@ const products = [
     categories: ["Exterior"],
   },
   {
-    id: 13,
     img: "https://i.postimg.cc/WbCvR6Bk/product13.jpg",
     price: 5890,
     stock: 1,
@@ -149,7 +127,6 @@ const products = [
     categories: ["Interior", "Living", "Más vendidos"],
   },
   {
-    id: 14,
     img: "https://i.postimg.cc/JzXWRH8d/product14.jpg",
     price: 690,
     stock: 10,
@@ -159,7 +136,6 @@ const products = [
     categories: ["Dormitorio", "Interior", "De pared", "Para regalar"],
   },
   {
-    id: 15,
     img: "https://i.postimg.cc/MG8JHZKZ/product15.jpg",
     price: 890,
     stock: 11,
@@ -169,7 +145,6 @@ const products = [
     categories: ["Dormitorio", "Interior", "De pared"],
   },
   {
-    id: 16,
     img: "https://i.postimg.cc/NMp3d18L/product16.jpg",
     price: 8990,
     stock: 4,
@@ -179,7 +154,6 @@ const products = [
     categories: ["Iluminación", "Interior", "Dormitorio", "Rústico"],
   },
   {
-    id: 17,
     img: "https://i.postimg.cc/YSfKWch6/product17.jpg",
     price: 5500,
     stock: 15,
@@ -189,7 +163,6 @@ const products = [
     categories: ["Interior", "Dormitorio"],
   },
   {
-    id: 18,
     img: "https://i.postimg.cc/tJcLjpMj/product18.jpg",
     price: 2800,
     stock: 3,
@@ -199,7 +172,6 @@ const products = [
     categories: ["Rústico", "Más vendidos", "Dormitorio", "Interior"],
   },
   {
-    id: 19,
     img: "https://i.postimg.cc/qRJfcm39/product19.jpg",
     price: 10490,
     stock: 23,
@@ -209,7 +181,6 @@ const products = [
     categories: ["Interior", "Dormitorio", "Iluminación", "Rústico"],
   },
   {
-    id: 20,
     img: "https://i.postimg.cc/kGGkzBws/product20.jpg",
     price: 3250,
     stock: 18,
@@ -219,7 +190,6 @@ const products = [
     categories: ["Interior", "Dormitorio"],
   },
   {
-    id: 21,
     img: "https://i.postimg.cc/v8SR9tHN/product21.jpg",
     price: 13890,
     stock: 2,
@@ -229,7 +199,6 @@ const products = [
     categories: ["Interior", "Exterior", "Rústico", "Comedor"],
   },
   {
-    id: 22,
     img: "https://i.postimg.cc/9F46BwDF/product22.jpg",
     price: 4900,
     stock: 8,
@@ -239,7 +208,6 @@ const products = [
     categories: ["Interior", "Comedor"],
   },
   {
-    id: 23,
     img: "https://i.postimg.cc/ZK11sYNP/product23.jpg",
     price: 6800,
     stock: 19,
@@ -249,7 +217,6 @@ const products = [
     categories: ["Interior", "Comedor"],
   },
   {
-    id: 24,
     img: "https://i.postimg.cc/sg7bkFPk/product24.jpg",
     price: 3990,
     stock: 14,
@@ -259,7 +226,6 @@ const products = [
     categories: ["Más vendidos", "Interior", "Comedor"],
   },
   {
-    id: 25,
     img: "https://i.postimg.cc/g0p1dMNn/product25.jpg",
     price: 599,
     stock: 67,
@@ -277,7 +243,6 @@ const products = [
     ],
   },
   {
-    id: 26,
     img: "https://i.postimg.cc/SKG3KWvV/product26.jpg",
     price: 2880,
     stock: 3,
@@ -295,7 +260,6 @@ const products = [
     ],
   },
   {
-    id: 27,
     img: "https://i.postimg.cc/FRsqkYtv/product27.jpg",
     price: 7290,
     stock: 8,
@@ -305,7 +269,6 @@ const products = [
     categories: ["Interior", "Baño", "Dormitorio", "Espejos", "De pared"],
   },
   {
-    id: 28,
     img: "https://i.postimg.cc/T1BHsQK2/product28.jpg",
     price: 2450,
     stock: 12,
@@ -315,7 +278,6 @@ const products = [
     categories: ["Rústico", "Living", "Interior", "Dormitorio"],
   },
   {
-    id: 29,
     img: "https://i.postimg.cc/qRbFsp03/product29.jpg",
     price: 670,
     stock: 50,
@@ -325,7 +287,6 @@ const products = [
     categories: ["Baño", "Espejos", "Interior", "Rústico", "De pared"],
   },
   {
-    id: 30,
     img: "https://i.postimg.cc/KcWV4c0X/product30.jpg",
     price: 6890,
     stock: 19,
@@ -335,7 +296,6 @@ const products = [
     categories: ["Espejos", "Living", "Dormitorio", "Interior", "De pared"],
   },
   {
-    id: 31,
     img: "https://i.postimg.cc/0jzBZh2H/product31.jpg",
     price: 4990,
     stock: 10,
@@ -354,7 +314,6 @@ const products = [
     ],
   },
   {
-    id: 32,
     img: "https://i.postimg.cc/dtTfCMfh/product32.jpg",
     price: 800,
     stock: 23,
@@ -364,7 +323,6 @@ const products = [
     categories: ["Interior", "Dormitorio", "Baño", "De pared"],
   },
   {
-    id: 33,
     img: "https://i.postimg.cc/FH5BgWtD/product33.jpg",
     price: 450,
     stock: 50,
@@ -374,7 +332,6 @@ const products = [
     categories: ["Espejos", "Baño", "Interior", "De pared"],
   },
   {
-    id: 34,
     img: "https://i.postimg.cc/XYfD2f43/product34.jpg",
     price: 1190,
     stock: 43,
@@ -393,7 +350,6 @@ const products = [
     ],
   },
   {
-    id: 35,
     img: "https://i.postimg.cc/25C9g1SW/product35.jpg",
     price: 790,
     stock: 8,
@@ -403,7 +359,6 @@ const products = [
     categories: ["Espejos", "Baño", "Interior"],
   },
   {
-    id: 36,
     img: "https://i.postimg.cc/wBF4z91G/product36.jpg",
     price: 290,
     stock: 79,
@@ -413,7 +368,6 @@ const products = [
     categories: ["Cocina", "Comedor", "Interior", "Para regalar"],
   },
   {
-    id: 37,
     img: "https://i.postimg.cc/Pxx3r0Zr/product37.jpg",
     price: 380,
     stock: 290,
@@ -429,7 +383,6 @@ const products = [
     ],
   },
   {
-    id: 38,
     img: "https://i.postimg.cc/4dS8Kwbv/product38.jpg",
     price: 460,
     stock: 56,
@@ -439,7 +392,6 @@ const products = [
     categories: ["Cocina", "Interior", "Para regalar", "Más vendidos"],
   },
   {
-    id: 39,
     img: "https://i.postimg.cc/qq612njP/product39.jpg",
     price: 6750,
     stock: 50,
@@ -449,7 +401,6 @@ const products = [
     categories: ["Cocina", "Interior", "De pared", "Más vendidos"],
   },
   {
-    id: 40,
     img: "https://i.postimg.cc/bdX3gJ5s/product40.jpg",
     price: 1900,
     stock: 16,
@@ -471,12 +422,14 @@ export const getProducts = () => {
 };
 
 export const getOneProduct = (id) => {
-  console.log(id)
-  return getProducts().then((res) => {
-    const product = res.find((prod) => prod.id === parseInt(id))
-    return product
-  }).catch((err) => {
-    console.log("Ocurrió un error", err);
-    throw err; // Asegura que la promesa rechazada sea manejada correctamente en el lugar donde se llama a la función.  Propaga el error para que pueda ser manejado a nivel del componente.
-  })
-}
+  console.log(id);
+  return getProducts()
+    .then((res) => {
+      const product = res.find((prod) => prod.id === parseInt(id));
+      return product;
+    })
+    .catch((err) => {
+      console.log("Ocurrió un error", err);
+      throw err; // Asegura que la promesa rechazada sea manejada correctamente en el lugar donde se llama a la función.  Propaga el error para que pueda ser manejado a nivel del componente.
+    });
+};

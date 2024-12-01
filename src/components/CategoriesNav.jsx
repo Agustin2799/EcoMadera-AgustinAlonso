@@ -7,7 +7,6 @@ const CategoriesNav = ({ categoriesList }) => {
   const [categorySelected, setCategorySelected] = useState("Todos los productos");
 
   useEffect(() => {
-    console.log(categorySelected);
     //encodeURIComponent se usa para asegurar la codificación correcta de la URL en todos los navegadores, algunos lo hacen por defecto, pero es arriesgado confiar en que todos los navegadores leerán correctamente la url cuando se crea dinámicamente.
     if (categorySelected === 'Todos los productos')
       navigate("/all-products");

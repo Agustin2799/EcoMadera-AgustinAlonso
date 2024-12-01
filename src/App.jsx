@@ -6,20 +6,23 @@ import ProductsView from "./views/ProductsView";
 import Nav from "./components/Nav";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 
+//Importamos el provedor del contexto del carrito
+import { CartProvider } from "./context/cartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      {/*BrowserRouters evalua las rutas*/}
-     <Nav />
-      <Routes>
-        <Route path="/" element={<HomeView />} />
-        <Route path="/all-products" element={<ProductsView />}/>
-        <Route path="/category/:category" element={<ProductsView />} />
-        <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
-        {/* <Route path="/item" element={ } /> */}
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        {/*BrowserRouters evalua las rutas*/}
+        <Nav />
+        <Routes>
+          <Route path="/" element={<HomeView />} />
+          <Route path="/all-products" element={<ProductsView />} />
+          <Route path="/category/:category" element={<ProductsView />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

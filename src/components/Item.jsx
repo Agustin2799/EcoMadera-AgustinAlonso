@@ -5,11 +5,30 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import {
+  doc,
+  addDoc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  collection,
+} from "firebase/firestore";
+import { products } from "../mock/data";
 
 const Item = ({ product }) => {
+  
+
+  /* const addData = () => {
+    console.log('add data f')
+    const collectionToAdd = collection(db, "ítems");
+      products.map((item) => addDoc(collectionToAdd, item));
+      console.log('agregado:', product.name)
+    }; */
+
   return (
     <div className="w-100 h-min flex flex-col bg-slate-600 rounded-lg shadow-xl shadow-slate-800 text-white mx-5">
       <div className="h-full rounded-t-lg relative">
+
         <div className="absolute rounded-full p-2 bg-amber-500 hover:bg-amber-600 transition-all duration-500 bottom-3 right-3">
           {" "}
           <ShoppingCartIcon className="size-4 md:size-5" />

@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
-import { getProducts } from "../mock/data";
 import { useParams } from "react-router-dom";
 import ProductsLoader from "./ProductsLoader";
-import { motion, useAnimation } from 'framer-motion'
+import { animate, motion, useAnimation } from "framer-motion";
+import { getAllProductsFromDb, getProductsCategoryFromDb } from "../database/productsQueries";
 
 const ItemListContainer = ({ greeting }) => {
   const { category } = useParams();
 
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [header, setHeader] = useState(greeting);
   const controls = useAnimation();
-
-  const startAnimation = () => {};
 
   const onAdd = (cantidad) => {
     cantidad > 0
@@ -23,43 +21,60 @@ const ItemListContainer = ({ greeting }) => {
   };
 
   //Función para cambiar la primera letra de un string a mayúsculas, se usa para el header
-  const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+  const capitalizeFirstLetter = (str) =>
+    str.charAt(0).toUpperCase() + str.slice(1);
 
+  const getAllProducts = async () => {
+    try {
+      const products = await getAllProductsFromDb();
+      setProducts(products);
+    } catch (error) {
+      console.error(
+        "Error al obtener todos los productos en el useEffect:",
+        error
+      );
+      // Aquí podría manejar el error de una manera diferente que en la función getAllProducts, como mostrar un mensaje de error al usuario
+    } finally {
+      setLoading(false);
+    }
+  };
+  const getProductsCategory = async () => {
+    try {
+      const products = await getProductsCategoryFromDb(
+        capitalizeFirstLetter(category)
+      );
+      setProducts(products);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  //Este useEffect se encarga de mostrar los productos de una categoría determinada cuando el url param cambie, y si no existe, trae todos los productos
   useEffect(() => {
-    setLoading(true);
-    getProducts()
-      .then((res) => {
-        if (category) {
-          //Verificamos, para cada producto, si la categoria seleccionada que llega como parámetro en la url, concide con alguna en el array de categorias de cada producto, convertidas a minúsculas.
-          const productsFiltered = res.filter((product) =>
-            product.categories.some((cat) => cat.toLowerCase() === category)
-          );
-          setProducts(productsFiltered);
-          setHeader(category);
-        } else {
-          setProducts(res);
-          setHeader(greeting);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        setHeader("Ocurrió un error");
-      })
-      .finally(() => setLoading(false));
+    if (category) {
+      setHeader(category);
+      getProductsCategory();
+    } else {
+      setHeader(greeting);
+      getAllProducts();
+    }
   }, [category]);
 
   //Lo usaremos para reiniciar la animación cada vez que cambie el header de los productos
-  // Usamos controls.start() para reiniciar la animación cada vez que cambie el header 
-  useEffect(() => {
-    if (!loading) {
-      controls.start({
-        x: [50, 0], // Podemos usar un array para definir la animación
-        opacity: [0, 1],
-        transition: { duration: 1 },
-      });
-      console.log("animando");
-    }
-  }, [controls, loading]);
+  // Usamos controls.start() para reiniciar la animación cada vez que cambie el header
+   useEffect(() => {
+     if (!loading) {
+         controls.start({
+           x: [50, 0], // Podemos usar un array para definir la animación
+           opacity: [0, 1],
+           transition: { duration: 1 },
+         });
+       //  console.log("animando");
+       }
+     
+   }, [controls, header, loading]);
 
   return (
     <section className=" bg-slate-400 min-h-screen h-auto">
@@ -67,7 +82,6 @@ const ItemListContainer = ({ greeting }) => {
         <div className="flex flex-col w-full">
           {!loading && (
             <motion.h1
-            
               animate={controls}
               className="text-white text-3xl md:text-5xl font-semibold mx-16 mt-5 md:mx-24"
             >
