@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { cartContext } from "../context/cartContext";
 import ItemCategoryLabel from "./ItemCategoryLabel";
-import ItemCount from "./ItemCount";
+import AddToCart from "./AddToCart";
 
 const ItemDetail = ({ product }) => {
+  
  
   return (
     <div className="w-5/6 mx-auto">
@@ -35,12 +37,10 @@ const ItemDetail = ({ product }) => {
               ${product.price}
             </h4>
             <h4 className="text-xl m-5 text-slate-700">Stock: {product.stock}</h4>
-            {/* <div className="flex">
-                <ItemCount stock={product.stock} />
-                <button className="rounded-lg border p-2">
-                  Agregar al carrito
-                </button>
-              </div> */}
+            <div className="flex">
+                <AddToCart product={product} />
+               
+              </div>
           </div>
         </div>
       </div>

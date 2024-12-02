@@ -6,12 +6,13 @@ export const cartContext = createContext(null)
 //Componente que provee el contexto del carrito con el que se envolverá a app
 export const CartProvider = ({children}) => {
   //Estado local para el carrito, el cual será distribuido para todos los componentes que consuman el contexto
-  const [cart, setCart] = useState('Soy el carrito');
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const getCart = async () => {
       const cart = await getCartFromDb()
       console.log(cart)
+      setCart(cart)
     }
     getCart()
   },[])

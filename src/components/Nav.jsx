@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CartWidget from "./CartWidget";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
@@ -53,7 +53,9 @@ const Nav = () => {
             </ul>
           </div>
           {/* Cart Widget */}
-          <CartWidget productosEnCarrito={5} />
+          <Link to="/cart">
+            <CartWidget productosEnCarrito={5} />
+          </Link>
           <div
             className="sm:hidden flex items-center"
             onClick={openAndCloseNav}

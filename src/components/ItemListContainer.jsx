@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemCount from "./ItemCount";
+
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import ProductsLoader from "./ProductsLoader";
@@ -14,11 +14,11 @@ const ItemListContainer = ({ greeting }) => {
   const [header, setHeader] = useState(greeting);
   const controls = useAnimation();
 
-  const onAdd = (cantidad) => {
-    cantidad > 0
-      ? alert(`Agregaste al carrito ${cantidad}`)
-      : alert(`No se ah agregado al carrito, la cantidad debe ser mayor a 0.`);
-  };
+  // const onAdd = (cantidad) => {
+  //   cantidad > 0
+  //     ? alert(`Agregaste al carrito ${cantidad}`)
+  //     : alert(`No se ah agregado al carrito, la cantidad debe ser mayor a 0.`);
+  // };
 
   //Función para cambiar la primera letra de un string a mayúsculas, se usa para el header
   const capitalizeFirstLetter = (str) =>
