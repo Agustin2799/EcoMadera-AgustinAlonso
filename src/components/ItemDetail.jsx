@@ -39,7 +39,6 @@ const ItemDetail = ({ product }) => {
             <h4 className="text-xl m-5 text-slate-700">Stock: {product.stock}</h4>
             <div className="flex">
                 <AddToCart product={product} />
-               
               </div>
           </div>
         </div>

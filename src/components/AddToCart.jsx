@@ -15,7 +15,8 @@ const AddToCart = ({ product }) => {
     const addProductToCart = async () => {
         try {
             const productoAgregado = await addToCartAtDb(product, count)
-            setCart([productoAgregado, ...cart]) //Agregamos el producto recien añadido al carrito, en nuestro carrito local, para no tener que hacer una nueva consulta para actualizar la vista.
+          setCart([productoAgregado, ...cart]) //Agregamos el producto recien añadido al carrito, en nuestro carrito local, para no tener que hacer una nueva consulta para actualizar la vista.
+          console.log('Producto agregado al carrito')
         } catch (error) {
             throw new Error('Hubo un error al agregar el producto al carrito', error)
         }
