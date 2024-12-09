@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { cartContext } from "../context/cartContext";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { deleteProductInCartAtDb } from "../database/cartQueries";
+import toast from "react-hot-toast";
 
 const CartItem = ({ item }) => {
   const { cart, setCart } = useContext(cartContext);
@@ -9,7 +10,9 @@ const CartItem = ({ item }) => {
   const deleteFromCart = async () => {
     console.log(item)
     await deleteProductInCartAtDb(item.cartProductId); //Eliminamos de la base de datos el producto
+    toast.error('Producto eliminado del carrito')
     setCart(cart.filter((productInCart) => productInCart.cartProductId !== item.cartProductId)) //Si todo sale bien, seteamos  y flitramos localmente el contexto del carrito para no tener que volver a consultar el carrito en la bd
+  
   };
 
   return (

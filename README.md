@@ -1,1 +1,7 @@
-# EcoMadera E-commerce ![alt text](image.png)
+# EcoMadera E-commerce 🛒
+
+### Instalación ⚙️
+
+### Versión Host ⭐
+
+### Librerías utilizadas 💩
