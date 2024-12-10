@@ -19,7 +19,7 @@ const ItemDetail = ({ product }) => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
           <div className="mb-5">
             {/* Título del producto */}
-            <h1 className="text-4xl md:text-5xl text-amber-900 font-light">
+            <h1 className="text-4xl md:text-5xl text-white font-light">
               {product.name}
             </h1>
 
@@ -32,14 +32,18 @@ const ItemDetail = ({ product }) => {
           <div className="text-white text-center md:text-left order-3 ">
             <h3 className="text-lg md:text-xl">{product.description}</h3>
           </div>
-          <div className="flex my-10 justify-between  items-center order-last">
-            <h4 className="text-3xl font-semibold bg-slate-600 p-2 rounded-md text-green-300">
-              ${product.price}
-            </h4>
-            <h4 className="text-xl m-5 text-slate-700">Stock: {product.stock}</h4>
+          <div className="flex flex-col my-10 justify-start order-last">
+            <div className="flex items-center mb-4 justify-start">
+              <h4 className="text-3xl font-semibold bg-slate-600 p-2 rounded-md text-green-300">
+                ${product.price}
+              </h4>
+              <h4 className="text-xl mx-5 text-white">
+                Stock: {product.stock}
+              </h4>
+            </div>
             <div className="flex">
-                <AddToCart product={product} />
-              </div>
+              <AddToCart product={product} />
+            </div>
           </div>
         </div>
       </div>

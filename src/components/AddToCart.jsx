@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { cartContext } from "../context/cartContext";
 import { addToCartAtDb } from "../database/cartQueries";
+import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/outline";
+
 import toast from "react-hot-toast";
 
 const AddToCart = ({ product }) => {
@@ -32,17 +34,26 @@ const AddToCart = ({ product }) => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex justify-center items-center gap-10">
+      <div className="flex flex-col justify-center">
+        <h3 className="text-slate-700 text-xl mb-2">Seleccione cantidad:</h3>
+        <div className="flex mx-auto">
+          <button className="" onClick={restar}>
+            <MinusCircleIcon className="size-9 text-white" />
+          </button>
+          <div className="w-auto mx-3 text-center text-xl font-bold text-white">
+            {count}
+          </div>
+          <button className="" onClick={sumar}>
+            <PlusCircleIcon className="size-9 text-white" />
+          </button>
+        </div>
+      </div>
+
       <div>
-        <button className="p-2 bg-green-600 text-white" onClick={sumar}>
-          +
-        </button>
-        <span className="p-2 bg-slate-500 text-white">{count}</span>
-        <button className="p-2 bg-red-600 text-white" onClick={restar}>
-          -
-        </button>
         <button
-          className="p-2 bg-green-500 text-white"
+          type="button"
+          className="text-white bg-gradient-to-br from-amber-500 to-amber-700 hover:brightness-110 hover:scale-110 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all duration-500"
           onClick={() => addProductToCart()}
         >
           Agregar al carrito
