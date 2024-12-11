@@ -22,7 +22,8 @@ const ItemDetailContainer = () => {
           setProductNotFound(true);
           return;
         }
-
+        //Agregando una linea
+        
         setProduct(productFromDb);
       } catch (error) {
         console.error("Error al obtener el producto:", error);
