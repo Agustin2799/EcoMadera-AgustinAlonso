@@ -7,14 +7,16 @@ import CartView from "./views/CartView";
 import Nav from "./components/Nav";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { Toaster } from "react-hot-toast"
+import NotFoundView from "./views/NotFoundView";
 
 //Importamos el provedor del contexto del carrito
 import { CartProvider } from "./context/cartContext";
+import { warning } from "framer-motion";
 
 const toasterSettings = {
   // Configuración predeterminada
   className: "rounded-lg shadow-md text-sm px-10 py-2 bg-green-200",
-  duration: 2000,
+  duration: 3500,
 
   // Configuración para éxitos
   success: {
@@ -49,14 +51,15 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         {/*BrowserRouters evalua las rutas*/}
-        <Toaster position="top-center" toastOptions={toasterSettings}/>
+        <Toaster position="top-center" toastOptions={toasterSettings} />
         <Nav />
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/all-products" element={<ProductsView />} />
           <Route path="/category/:category" element={<ProductsView />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<CartView />}/>
+          <Route path="/cart" element={<CartView />} />
+          <Route path="*" element={<NotFoundView />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
+
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ItemDetailLoader from "./ItemDetailLoader";
 import { getProductFromDb } from "../database/productsQueries";
+import ProductNotFound from "./ProductNotFound";
 
 const ItemDetailContainer = () => {
   const [detailLoader, setDetailLoader] = useState(true);
   const [product, setProduct] = useState();
+  const [productNotFound, setProductNotFound] = useState(false)
   const { itemId } = useParams();
+  const navigate = useNavigate()
 
   
 
@@ -26,6 +30,8 @@ const ItemDetailContainer = () => {
         const product = await getProductFromDb(itemId)
         setProduct(product)
       } catch (error) {
+        console.log('no se encontró el producto')
+        setProductNotFound(true)
         throw new Error("Error al setear los detalles del productos", error);
       } finally {
         setDetailLoader(false)
@@ -34,6 +40,7 @@ const ItemDetailContainer = () => {
     getProduct()
   }, [itemId]);
 
+  if (productNotFound) return <ProductNotFound />
   //Mientras  el detailLoader este activo, mostramos el componente ItemDetailLoader, cuando cargue mostramos el ItemDetail
     return <div className="bg-slate-400 w-full min-h-screen pt-5 md:pt-10">{detailLoader ? <ItemDetailLoader />: <ItemDetail product={product} />}</div>;
 };

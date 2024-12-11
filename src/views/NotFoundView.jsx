@@ -1,11 +1,11 @@
 import React from "react";
-import { ShoppingCartIcon, PlusCircleIcon, MagnifyingGlassCircleIcon} from "@heroicons/react/24/outline";
+import { ShoppingCartIcon, PlusCircleIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
-const EmptyCart = () => {
+const NotFoundView = () => {
   return (
-    <div className="h-screen bg-slate-400 flex justify-start items-center text-center flex-col text-white gap-10 p-10">
-      <h1 className="text-4xl font-light">Tu carrito está vacío</h1>
+    <div className="h-screen bg-slate-400 flex justify-start items-center flex-col text-white gap-10 p-10">
+      <h1 className="text-4xl font-light">No se encontró la URL.</h1>
       <div className="relative">
         <ShoppingCartIcon className="w-24 h-24" />
         <PlusCircleIcon className="absolute -top-5 -right-5 w-12 h-12" />
@@ -24,4 +24,4 @@ const EmptyCart = () => {
   );
 };
 
-export default EmptyCart;
+export default NotFoundView;

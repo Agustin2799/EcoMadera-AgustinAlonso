@@ -18,6 +18,15 @@ const AddToCart = ({ product }) => {
 
   const addProductToCart = async () => {
     try {
+      // Verifica si el producto ya está en el carrito
+      console.log(product)
+      console.log(cart)
+      const productInCart = cart.some((item) => item.productId === product.id);
+
+      if (productInCart) {
+        toast.error("Este producto ya está en tu carrito");
+        return; // Salir si el producto ya está en el carrito
+      }
       const productoAgregado = await addToCartAtDb(product, count);
       setCart([productoAgregado, ...cart]); //Agregamos el producto recien añadido al carrito, en nuestro carrito local, para no tener que hacer una nueva consulta para actualizar la vista.
       console.log("Producto agregado al carrito");

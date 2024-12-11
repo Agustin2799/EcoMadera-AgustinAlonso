@@ -54,7 +54,7 @@ const Nav = () => {
           </div>
           {/* Cart Widget */}
           <Link to="/cart">
-            <CartWidget productosEnCarrito={5} />
+            <CartWidget />
           </Link>
           <div
             className="sm:hidden flex items-center"
