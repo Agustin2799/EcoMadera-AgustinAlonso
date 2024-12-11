@@ -12,6 +12,7 @@ import NotFoundView from "./views/NotFoundView";
 //Importamos el provedor del contexto del carrito
 import { CartProvider } from "./context/cartContext";
 import { warning } from "framer-motion";
+import ProductNotFound from "./components/ProductNotFound";
 
 const toasterSettings = {
   // Configuración predeterminada
