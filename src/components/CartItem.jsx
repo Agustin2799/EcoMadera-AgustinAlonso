@@ -16,22 +16,22 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="bg-slate-500 flex flex-row gap-3 w-5/6 sm:w-2/3 h-auto p-4 rounded-lg shadow-md mx-auto mb-5">
+    <div className="bg-slate-600 flex sm:flex-row  flex-col gap-3 w-5/6 h-auto p-4 rounded-lg shadow-md mx-auto mb-5">
       <img
-        className="rounded-lg h-36 w-1/3  object-cover"
+        className="rounded-lg h-36 w-full sm:w-1/3  object-cover"
         src={`${item.img}`}
         alt={item.name}
       />
-      <div className="flex flex-col justify-between flex-1">
-        <div className="text-sm font-semibold text-white mb-1 truncate">
+      <div className="flex flex-col justify-start items-start flex-1">
+        <div className="text-2xl font-semibold text-white mb-1">
           {item.name}
         </div>
-        <div className="text-sm text-white mb-1">{item.price}</div>
-        <div className="text-xs text-white mb-2">{item.count} in cart</div>
+        <div className="text-xl text-green-500 mb-1 bg-gray-700 p-1 rounded-sm">${item.price}</div>
+        <div className="text-base text-white font-semibold mb-2">{item.count} en el carrito</div>
       </div>
       <div
         onClick={() => deleteFromCart()}
-        className="flex justify-center items-center p-2 bg-red-500 rounded-full cursor-pointer hover:bg-red-600 transition-colors duration-200"
+        className="flex justify-center items-center p-3 mt-auto bg-red-900 rounded-full cursor-pointer hover:bg-red-600 transition-colors duration-200"
       >
         <TrashIcon className="w-5 h-5 text-white" />
       </div>
