@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         className="absolute inset-0 bg-black opacity-75"
         onClick={onClose}
       ></div>
-      <div className="bg-slate-700 border-2 flex justify-center items-center flex-col border-green-500 rounded-lg p-5 z-10 w-6/12 text-white">
+      <div className="bg-slate-700 border-2 flex justify-center items-center flex-col border-green-500 rounded-lg p-5 z-10  w-10/12 md:w-6/12 text-white">
         {children}
       </div>
     </div>
