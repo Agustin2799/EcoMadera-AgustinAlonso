@@ -1,5 +1,6 @@
 import { collection, doc, getDoc, getDocs, query, where, addDoc, deleteDoc } from "firebase/firestore";
 import { db } from "./firebase.config";
+import { clearCart } from "./cartQueries";
 
 export const sendOrderToDb = async (values, cart) => {
 
@@ -10,6 +11,8 @@ export const sendOrderToDb = async (values, cart) => {
         const order = { client: { nombre: values.nombre, apellido: values.apellido, email: values.email, telefono: values.telefono }, products: proudctsInOrder, total: orderTotal }
         const orderCollection = collection(db, 'orders')
         const newDocRef = await addDoc(orderCollection, order) //Este addDoc devuelve la referencia del documento recién creado
+        // Llamamos a la función para limpiar la colección de cart
+        await clearCart();
         
         return newDocRef.id// devolvemos el producto recién agregado
     } catch (error) {

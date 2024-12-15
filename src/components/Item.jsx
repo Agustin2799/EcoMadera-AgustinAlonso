@@ -29,10 +29,10 @@ const Item = ({ product }) => {
     <div className="w-100 h-min flex flex-col bg-slate-600 rounded-lg shadow-xl shadow-slate-800 text-white mx-5">
       <div className="h-full rounded-t-lg relative">
 
-        <div className="absolute rounded-full p-2 bg-amber-500 hover:bg-amber-600 transition-all duration-500 bottom-3 right-3">
+        {/* <div className="absolute rounded-full p-2 bg-amber-500 hover:bg-amber-600 transition-all duration-500 bottom-3 right-3">
           {" "}
           <ShoppingCartIcon className="size-4 md:size-5" />
-        </div>
+        </div> */}
         <img
           className="rounded-t-lg w-full h-full object-cover"
           src={`${product.img}`}

@@ -10,10 +10,13 @@ const CheckOut = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [orderId, setOrderId] = useState(null)
   const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const closeModal = () => {
+    setModalOpen(false)
+    setCart([])
+  };
 
   // Accede al contexto del carrito.
-  const { cart } = useContext(cartContext);
+  const { cart, setCart } = useContext(cartContext);
 
   // Definición del esquema de validación con Yup.
   const validationSchema = Yup.object({
@@ -62,7 +65,7 @@ const CheckOut = () => {
           <h1 className="text-2xl mb-5">Resumen del pedido</h1>
           {cart.map((item, index) => (
             <div className="flex justify-between" key={index}>
-              <h2 className="text-xl">{`(${item.count})  ${item.name}`}</h2>
+              <h2 className="text-xl me-3">{`(${item.count})  ${item.name}`}</h2>
               <h3 className="text-xl text-green-500">
                 ${item.price * item.count}
               </h3>
@@ -120,19 +123,23 @@ const CheckOut = () => {
               </div>
             ))}
             <div className="flex w-full mt-5">
-              <div className="relative group mx-auto">
-                <div className="relative w-64 h-14 opacity-90 overflow-hidden rounded-xl bg-slate-900 z-10">
-                  <div className="absolute z-10 -translate-x-44 group-hover:translate-x-[30rem] ease-in transition-all duration-700 h-full w-44 bg-gradient-to-r from-amber-500 to-white/10 opacity-30 -skew-x-12"></div>
-                  <div className="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-2xl inset-0.5 bg-slate-900">
-                    <button
-                      name="text"
-                      className="input font-semibold text-lg h-full opacity-90 w-full px-16 py-3 rounded-xl bg-slate-900 text-amber-500"
-                      type="Submit" // Tipo submit para activar el manejo de envío de Formik.
-                    >
-                      Comprar
-                    </button>
+              <div className="flex w-full mt-5">
+                <div
+                  className="relative group mx-auto"
+                  onClick={() => formik.handleSubmit()}
+                >
+                  <div className="relative w-64 h-14 opacity-90 overflow-hidden rounded-xl bg-slate-800 z-10">
+                    <div className="absolute z-10 -translate-x-44 group-hover:translate-x-[30rem] ease-in transition-all duration-700 h-full w-44 bg-gradient-to-r from-green-400 to-white/10 opacity-30 -skew-x-12"></div>
+                    <div className="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-2xl inset-0.5 bg-slate-800">
+                      <button
+                        className="font-semibold text-lg h-full opacity-90 w-full px-16 py-3 rounded-xl bg-slate-800 text-green-400"
+                        type="button" // Cambiando de "Submit" a "button"
+                      >
+                        Comprar
+                      </button>
+                    </div>
+                    <div className="absolute duration-1000 group-hover:animate-spin w-full h-[100px] bg-gradient-to-r from-green-400 to-green-200 blur-[30px]"></div>
                   </div>
-                  <div className="absolute duration-1000 group-hover:animate-spin w-full h-[100px] bg-gradient-to-r from-amber-500 to-amber-300 blur-[30px]"></div>
                 </div>
               </div>
             </div>
@@ -143,7 +150,8 @@ const CheckOut = () => {
               </h2>
               <p className="mb-4 text-xl">Gracias por tu compra. ❤️</p>
               <p className="mb-4 font-semibold text-green-600">
-                Codigo de orden: <span className="font-medium text-white ms-3">{orderId}</span>
+                Codigo de orden:{" "}
+                <span className="font-medium text-white ms-3">{orderId}</span>
               </p>
 
               <button

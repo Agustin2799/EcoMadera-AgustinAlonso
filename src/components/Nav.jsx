@@ -57,7 +57,7 @@ const Nav = () => {
             <CartWidget />
           </Link>
           <div
-            className="sm:hidden flex items-center"
+            className="md:hidden flex items-center ms-2"
             onClick={openAndCloseNav}
           >
             {/* Este div contiene el componente motion.div de Framer Motion, que se utiliza para aplicar animaciones. */}

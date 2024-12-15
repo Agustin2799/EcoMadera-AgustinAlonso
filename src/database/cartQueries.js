@@ -34,9 +34,24 @@ export const deleteProductInCartAtDb = async (cartProductId) => {
         //Referencia al documento que queremos eliminar
         const docRef = doc(db, 'cart', cartProductId)
         //Eliminamos el documento
-         await deleteDoc(docRef)
+        await deleteDoc(docRef)
         console.log('Producto eliminado del carrito con éxito')
     } catch (error) {
         throw new Error('Error al eliminar el producto al carrito', error)
+    }
+};
+
+export const clearCart = async () => {
+    try {
+        const cartCollection = collection(db, 'cart');
+        const querySnapshot = await getDocs(cartCollection);
+
+        const deletePromises = querySnapshot.docs.map(doc => deleteDoc(doc.ref));
+        await Promise.all(deletePromises);
+
+        console.log("Cart cleared successfully");
+    } catch (error) {
+        console.error("Error clearing the cart: ", error);
+        throw new Error('Error al limpiar el carrito', error);
     }
 };
