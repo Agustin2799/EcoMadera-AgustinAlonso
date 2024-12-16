@@ -67,5 +67,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 Desarrollado por Agustín Alonso.
 <div align="left">
-  [<img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="linkedin logo"  />](https://www.linkedin.com/in/agustin-alonso-p/)
+ <a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
+  <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo" />
+</a>
 </div>
