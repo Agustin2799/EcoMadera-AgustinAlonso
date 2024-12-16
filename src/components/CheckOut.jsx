@@ -81,7 +81,7 @@ const CheckOut = () => {
 
         {/* Formulario de datos del comprador */}
         <div className="border rounded-lg m-7 flex flex-col p-5">
-          <h1 className="text-2xl mb-5">Datos del comprador</h1>
+          <h1 className="text-2xl mb-5">Datos personales</h1>
           <form
             className="flex flex-col items-center justify-center"
             onSubmit={formik.handleSubmit} // Asocia el manejo del envío al método handleSubmit de Formik.
