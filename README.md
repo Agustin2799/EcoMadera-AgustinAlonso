@@ -12,6 +12,7 @@ Entre las principales características implementadas, se incluyen:
 - **Formulario de compra**: Validaciones integradas para garantizar la correcta captura de datos.
 - **Diseño responsivo**: Adaptado para una visualización óptima en dispositivos móviles, tabletas y escritorios.
 
+
 ## Instalación ⚙️
 
 Si deseas instalar el proyecto en tu entorno local, sigue estos pasos:

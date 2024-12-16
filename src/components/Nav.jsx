@@ -38,16 +38,10 @@ const Nav = () => {
               <NavLink to="/all-products" className={navLinkClasses}>
                 Productos
               </NavLink>
-              <NavLink
-                to="/about"
-                className={`${navLinkClasses} pointer-events-none opacity-50`}
-              >
+              <NavLink to="/about" className={navLinkClasses}>
                 Nosotros
               </NavLink>
-              <NavLink
-                to="/contact"
-                className={`${navLinkClasses} pointer-events-none opacity-50`}
-              >
+              <NavLink to="/contact" className={navLinkClasses}>
                 Contacto
               </NavLink>
             </ul>
@@ -123,14 +117,14 @@ const Nav = () => {
             </NavLink>
             <NavLink
               to="/about"
-              className={`${navLinkClasses} pointer-events-none opacity-50`}
+              className={navLinkClasses}
               onClick={openAndCloseNav}
             >
               Nosotros
             </NavLink>
             <NavLink
               to="/contact"
-              className={`${navLinkClasses} pointer-events-none opacity-50`}
+              className={navLinkClasses}
               onClick={openAndCloseNav}
             >
               Contacto

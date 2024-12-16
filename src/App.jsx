@@ -8,11 +8,12 @@ import Nav from "./components/Nav";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { Toaster } from "react-hot-toast"
 import NotFoundView from "./views/NotFoundView";
+import ScrollToTop from "./components/ScrollToTop";
 
 //Importamos el provedor del contexto del carrito
 import { CartProvider } from "./context/cartContext";
-import { warning } from "framer-motion";
-import ProductNotFound from "./components/ProductNotFound";
+import ContactView from "./views/ContactView";
+import AboutView from "./views/AboutView";
 
 const toasterSettings = {
   // Configuración predeterminada
@@ -52,11 +53,15 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         {/*BrowserRouters evalua las rutas*/}
+        <ScrollToTop />
         <Toaster position="top-center" toastOptions={toasterSettings} />
         <Nav />
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/all-products" element={<ProductsView />} />
+          <Route path="/contact" element={<ContactView />} />
+          <Route path="/about" element={<AboutView />} />
+
           <Route path="/category/:category" element={<ProductsView />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartView />} />
