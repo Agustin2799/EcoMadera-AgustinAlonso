@@ -41,7 +41,7 @@ Puedes explorar la versión publicada del proyecto [aquí](https://eco-madera-ag
 
 El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
-<div align="left" style="margin-bottom: 20px">
+<div align="left">
   <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="firebase logo"  />
@@ -52,7 +52,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
     <img width="12" />
   <img src="https://skillicons.dev/icons?i=javascript" height="40" alt="javascript logo"  />
    <img width="12" />
-  <br>
+
 </div>
 
 
@@ -67,7 +67,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 - **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.
 - **Heroicons**: Componentes accesibles y diseño con íconos modernos.
 
-## `Desarrollado por Agustín Alonso.`
+#### `Desarrollado por Agustín Alonso.`
 <div align="left">
  <a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
   <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo" />
