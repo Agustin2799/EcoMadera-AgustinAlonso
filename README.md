@@ -66,6 +66,6 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 - **Heroicons**: Componentes accesibles y diseño con íconos modernos.
 
 Desarrollado por Agustín Alonso.
-<div align="left">
+[<div align="left">
   <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="linkedin logo"  />
-</div>
+</div>](https://www.linkedin.com/in/agustin-alonso-p/)
