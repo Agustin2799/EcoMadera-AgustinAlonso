@@ -55,12 +55,12 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 
 - **React**: Biblioteca principal para la construcción de la interfaz de usuario.
+- **Tailwind CSS**: Framework de estilos utilitarios para un diseño rápido, moderno y responsivo.
+- **Framer Motion**: Animaciones fluidas e interactivas.
 - **Firebase**: Gestión de la base de datos en tiempo real.
 - **React Router**: Implementación de rutas dinámicas en la aplicación.
 - **Formik & Yup**: Manejo y validación de formularios.
-- **Framer Motion**: Animaciones fluidas e interactivas.
 - **React Hot Toast**: Sistema de notificaciones ligero y atractivo.
 - **React Scroll**: Funcionalidad para scroll suave entre secciones.
 - **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.
-- **@headlessui/react y @heroicons/react**: Componentes accesibles y diseño con íconos modernos.
-- **Tailwind CSS**: Framework de estilos utilitarios para un diseño rápido, moderno y responsivo.
+- **Heroicons**: Componentes accesibles y diseño con íconos modernos.
