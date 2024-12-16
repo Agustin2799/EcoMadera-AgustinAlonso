@@ -17,32 +17,50 @@ Entre las principales características implementadas, se incluyen:
 Si deseas instalar el proyecto en tu entorno local, sigue estos pasos:
 
 1. Clona o haz un fork de este repositorio y sincronízalo en tu máquina local con:
-   ````bash
-   git pull
-   ```
+```bash
+git pull
+```
+   
 2. Navega hasta el directorio del proyecto e instala las dependencias ejecutando:
+
 ```bash
 npm install
 ```
+
 3. Inicia el servidor de desarrollo con el comando:
+
 ```bash
 npm run dev
 ```
+
 ## Versión en producción ⭐
 
 Puedes explorar la versión publicada del proyecto [aquí](https://eco-madera-agustin-alonso.vercel.app/).
 
 ## Tecnologías y librerías utilizadas 📦
 
-El proyecto se desarrolló utilizando las siguientes herramientas y librerías: 
+El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
-- **React**: Biblioteca principal para la construcción de la interfaz de usuario.  
-- **Firebase**: Gestión de la base de datos en tiempo real.  
-- **React Router**: Implementación de rutas dinámicas en la aplicación.  
-- **Formik & Yup**: Manejo y validación de formularios.  
-- **Framer Motion**: Animaciones fluidas e interactivas.  
-- **React Hot Toast**: Sistema de notificaciones ligero y atractivo.  
-- **React Scroll**: Funcionalidad para scroll suave entre secciones.  
-- **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.  
-- **@headlessui/react y @heroicons/react**: Componentes accesibles y diseño con íconos modernos.  
-- **Tailwind CSS**: Framework de estilos utilitarios para un diseño rápido, moderno y responsivo.  
+<div align="left">
+  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="firebase logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo"  />
+   <img width="12" />
+  <img src="https://skillicons.dev/icons?i=vite" height="40" alt="vite logo"  />
+    <img width="12" />
+  <img src="https://skillicons.dev/icons?i=javascript" height="40" alt="javascript logo"  />
+</div>
+
+
+- **React**: Biblioteca principal para la construcción de la interfaz de usuario.
+- **Firebase**: Gestión de la base de datos en tiempo real.
+- **React Router**: Implementación de rutas dinámicas en la aplicación.
+- **Formik & Yup**: Manejo y validación de formularios.
+- **Framer Motion**: Animaciones fluidas e interactivas.
+- **React Hot Toast**: Sistema de notificaciones ligero y atractivo.
+- **React Scroll**: Funcionalidad para scroll suave entre secciones.
+- **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.
+- **@headlessui/react y @heroicons/react**: Componentes accesibles y diseño con íconos modernos.
+- **Tailwind CSS**: Framework de estilos utilitarios para un diseño rápido, moderno y responsivo.
