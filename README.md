@@ -51,6 +51,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
   <img src="https://skillicons.dev/icons?i=vite" height="40" alt="vite logo"  />
     <img width="12" />
   <img src="https://skillicons.dev/icons?i=javascript" height="40" alt="javascript logo"  />
+  <br>
 </div>
 
 
