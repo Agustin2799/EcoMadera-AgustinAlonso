@@ -1,27 +1,48 @@
 # EcoMadera E-commerce 🛒
 
-Este es un proyecto realizado como parte del curso de React de CoderHouse, consiste en una tienda online de productos fabricados en madera para el hogar.
+Este proyecto fue desarrollado como parte del curso de React en CoderHouse. Se trata de una tienda online especializada en productos de madera para el hogar, con un diseño funcional y características modernas.
 
-Dentro de las funcionalidades principales que fueron implementadas, se pueden mencionar:
+## Funcionalidades principales 🚀
 
-> Mostrar y filtrar por categoría (o conjunto de categorías), una lista de productos alojados en una base de datos, implementada con firebase.
-> Agregar y eliminar productos en el carrito, el carrito persiste entre sesiones.
-> Checkout, donde se muestra el detalle de la compra, catidades de los productos y el total a facturar.
-> Formulario de compra con validaciones correspondientes.
-> Diseño responsivo para todos los dispositivos.
+Entre las principales características implementadas, se incluyen:
 
-### Instalación ⚙️
-Si deseas instalar este proyecto localmente, debes hacer lo siguiente:
-1. Clonar o hacer fork en git de este proyecto, y hacer git pull a tu repositorio local.
-2. Ir a tu directorio local correspondiente y ejecuta:
+- **Catálogo de productos**: Visualización y filtrado de productos por categoría o combinaciones de categorías. Los datos se gestionan desde una base de datos alojada en Firebase.
+- **Carrito de compras**: Posibilidad de agregar y eliminar productos del carrito, con persistencia entre sesiones para mejorar la experiencia del usuario.
+- **Proceso de compra (Checkout)**: Detalle completo de la compra, incluyendo cantidades, lista de productos seleccionados y el total a facturar.
+- **Formulario de compra**: Validaciones integradas para garantizar la correcta captura de datos.
+- **Diseño responsivo**: Adaptado para una visualización óptima en dispositivos móviles, tabletas y escritorios.
+
+## Instalación ⚙️
+
+Si deseas instalar el proyecto en tu entorno local, sigue estos pasos:
+
+1. Clona o haz un fork de este repositorio y sincronízalo en tu máquina local con:
+   ````bash
+   git pull
+   ```
+2. Navega hasta el directorio del proyecto e instala las dependencias ejecutando:
 ```bash
-npm istall
+npm install
 ```
-3. Por último ejecuta:
+3. Inicia el servidor de desarrollo con el comando:
 ```bash
 npm run dev
 ```
-### Versión Host ⭐
-Si deseas visitar el Host del proyecto, hazlo [aquí](https://eco-madera-agustin-alonso.vercel.app/)
+## Versión en producción ⭐
 
-### Librerías utilizadas 💩
+Puedes explorar la versión publicada del proyecto [aquí](https://eco-madera-agustin-alonso.vercel.app/).
+
+## Tecnologías y librerías utilizadas 📦
+
+El proyecto se desarrolló utilizando las siguientes herramientas y librerías: 
+
+- **React**: Biblioteca principal para la construcción de la interfaz de usuario.  
+- **Firebase**: Gestión de la base de datos en tiempo real.  
+- **React Router**: Implementación de rutas dinámicas en la aplicación.  
+- **Formik & Yup**: Manejo y validación de formularios.  
+- **Framer Motion**: Animaciones fluidas e interactivas.  
+- **React Hot Toast**: Sistema de notificaciones ligero y atractivo.  
+- **React Scroll**: Funcionalidad para scroll suave entre secciones.  
+- **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.  
+- **@headlessui/react y @heroicons/react**: Componentes accesibles y diseño con íconos modernos.  
+- **Tailwind CSS**: Framework de estilos utilitarios para un diseño rápido, moderno y responsivo.  
