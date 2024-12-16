@@ -41,7 +41,7 @@ Puedes explorar la versión publicada del proyecto [aquí](https://eco-madera-ag
 
 El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
-<div align="left">
+<div align="left" style="margin-bottom: 20px">
   <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="firebase logo"  />
