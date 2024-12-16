@@ -4,7 +4,7 @@ Este es un proyecto realizado como parte del curso de React de CoderHouse, consi
 
 Dentro de las funcionalidades principales que fueron implementadas, se pueden mencionar:
 
-- Mostrar y filtrar por categoría (o conjunto de categorías), una lista de productos alojados en una base de datos, implementada con firebase.
+- `Mostrar y filtrar por categoría (o conjunto de categorías), una lista de productos alojados en una base de datos, implementada con firebase.`
 - Agregar y eliminar productos en el carrito, el carrito persiste entre sesiones.
 - Checkout, donde se muestra el detalle de la compra, catidades de los productos y el total a facturar.
 - Formulario de compra con validaciones correspondientes.
