@@ -68,9 +68,19 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 - **React Masonry CSS**: Diseño de cuadrícula responsivo para mostrar los productos.
 - **Heroicons**: Componentes accesibles y diseño con íconos modernos.
 
-#### `Desarrollado por Agustín Alonso.`
+
+## 🧑‍💻 Autor  
+
+Desarrollado por **Agustín Alonso - FrontEnd developer**.  
 <div align="left">
  <a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
   <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo" />
 </a>
+    <a href="https://github.com/Agustin2799" target="_blank">
+  <img src="https://skillicons.dev/icons?i=github" height="40" alt="LinkedIn logo" />
+</a>
 </div>
+
+Si te gusta este proyecto, **¡no olvides darle una ⭐ en GitHub!**  
+
+
