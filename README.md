@@ -71,23 +71,8 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 ## 🧑‍💻 Autor  
 
-Desarrollado por **Agustín Alonso - FrontEnd developer**.  
-
-<div align="left">
-<a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
-  <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo" />
-</a>
-<img width="12" />
-<a href="https://github.com/Agustin2799" target="_blank">
-  <img src="https://skillicons.dev/icons?i=github" height="40" alt="LinkedIn logo" />
-</a>
-</div>
-
----
-
+Desarrollado por **[Agustín Alonso - FrontEnd developer](https://www.linkedin.com/in/agustin-alonso-p/)**.  
 `Si te gusta este proyecto, ¡no olvides darle una ⭐ en GitHub!`
-
----
 
 ## 📜 Licencia  
 
