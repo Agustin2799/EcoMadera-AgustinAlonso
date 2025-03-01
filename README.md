@@ -71,7 +71,8 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 ## 🧑‍💻 Autor  
 
-Desarrollado por **Agustín Alonso - FrontEnd developer**.  
+Desarrollado por **Agustín Alonso - FrontEnd developer**.
+
 <div align="left">
 <a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
   <img src="https://skillicons.dev/icons?i=linkedin" height="40" alt="LinkedIn logo" />
