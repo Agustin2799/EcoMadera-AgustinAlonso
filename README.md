@@ -73,7 +73,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 Desarrollado por **[Agustín Alonso - FrontEnd developer](https://www.linkedin.com/in/agustin-alonso-p/)**.  
 
-`Si te gusta este proyecto, ¡no olvides darle una ⭐ en GitHub!`
+`Si te gusta este proyecto, ¡no olvides darle una ⭐ en GitHub!.`
 
 ## 📜 Licencia  
 
