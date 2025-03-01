@@ -71,7 +71,7 @@ El proyecto se desarrolló utilizando las siguientes herramientas y librerías:
 
 ## 🧑‍💻 Autor  
 
-Desarrollado por **Agustín Alonso - FrontEnd developer**.
+Desarrollado por **Agustín Alonso - FrontEnd developer**.  
 
 <div align="left">
 <a href="https://www.linkedin.com/in/agustin-alonso-p/" target="_blank">
@@ -83,8 +83,12 @@ Desarrollado por **Agustín Alonso - FrontEnd developer**.
 </a>
 </div>
 
-Si te gusta este proyecto, **¡no olvides darle una ⭐ en GitHub!**  
+---
+
+`Si te gusta este proyecto, **¡no olvides darle una ⭐ en GitHub!** `
+
+---
 
 ## 📜 Licencia  
 
-Este proyecto está bajo la **Licencia MIT**. 
+Este proyecto está bajo la **Licencia MIT**.  
