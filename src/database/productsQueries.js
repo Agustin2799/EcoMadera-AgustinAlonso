@@ -7,8 +7,12 @@ export const getAllProductsFromDb = async () => {
     try {
         //Definimos la colleción que queremos obtener
         const productsCollection = collection(db, "ítems");
+        console.log("products collection", productsCollection)
+
         //Obtenemos los documentos de la colección
         const snapshot = await getDocs(productsCollection)
+        
+        console.log("snapshot ==> ", snapshot)
         //Mapeamos los datos
         const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
         //Retornamos los datos para que puedan ser utilizados
