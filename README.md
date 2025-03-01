@@ -85,7 +85,7 @@ Desarrollado por **Agustín Alonso - FrontEnd developer**.
 
 ---
 
-`Si te gusta este proyecto, **¡no olvides darle una ⭐ en GitHub!** `
+`Si te gusta este proyecto, ¡no olvides darle una ⭐ en GitHub!`
 
 ---
 
